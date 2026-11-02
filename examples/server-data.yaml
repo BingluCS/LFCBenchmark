@@ -1,0 +1,31 @@
+# 服务器上的裁剪字段。shape 暂按文件名推定为 C-order，请在正式研究前核对原数据的维度顺序。
+datasets:
+  - name: hurricane-crop
+    path: /data/lb/crop/HUR_100x100x60.f32
+    format: raw
+    dtype: '<f4'
+    shape: [100, 100, 60]
+  - name: nyx-crop
+    path: /data/lb/crop/NYX_100x100x60.f32
+    format: raw
+    dtype: '<f4'
+    shape: [100, 100, 60]
+  - name: miranda-crop
+    path: /data/lb/crop/MIR_100x100x60.f64
+    format: raw
+    dtype: '<f8'
+    shape: [100, 100, 60]
+
+compressors:
+  - name: sz3
+  - name: zfp
+
+error_bounds:
+  - mode: range_relative
+    value: 1.0e-3
+  - mode: range_relative
+    value: 1.0e-4
+
+warmups: 1
+repetitions: 3
+seed: 42

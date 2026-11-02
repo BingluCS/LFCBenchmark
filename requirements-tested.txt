@@ -1,0 +1,7 @@
+# Direct dependency versions used for validation; not a complete environment lock.
+numpy==2.4.6
+PyYAML==6.0.3
+pysz==1.1.0
+zfpy==1.0.1
+matplotlib==3.11.1
+pytest==9.2.0
