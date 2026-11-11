@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lfcbenchmark"
+version = "0.1.1"
+description = "openSDC-Bench: Open Scientific Data Compression Benchmark Suite"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "PyYAML>=6"]
+
+[project.optional-dependencies]
+cpu = ["pysz>=1.1", "zfpy>=1.0"]
+plot = ["matplotlib>=3.7"]
+test = ["pytest>=7"]
+
+[project.scripts]
+lfcbench = "lfcbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

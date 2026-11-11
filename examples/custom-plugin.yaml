@@ -1,0 +1,22 @@
+# 同时演示本地模块注册与独立包 entry point 注册。
+# shape 按文件名推定，正式实验前请核对原始维度顺序。
+datasets:
+  - name: hurricane-crop
+    path: /data/lb/crop/HUR_100x100x60.f32
+    format: raw
+    dtype: '<f4'
+    shape: [100, 100, 60]
+
+compressors:
+  - name: local.identity
+  - name: example.zlib
+    options:
+      level: 6
+
+error_bounds:
+  - mode: range_relative
+    value: 1.0e-4
+
+warmups: 0
+repetitions: 1
+seed: 42

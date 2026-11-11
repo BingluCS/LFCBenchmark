@@ -1,0 +1,9 @@
+{
+  "cv_threshold": 0.3,
+  "measured_repetitions": 1,
+  "spread_estimable": false,
+  "flagged_field_config_phases": 0,
+  "primary_estimator": "arithmetic mean of all measured times; no timing outlier discarded",
+  "median_estimator": "total bytes divided by sum of per-field median times; supplementary only",
+  "flagged": []
+}

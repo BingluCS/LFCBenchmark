@@ -1,0 +1,27 @@
+{
+  "PFPL": {
+    "url": "https://github.com/burtscher/PFPL.git",
+    "path": "third_party/PFPL",
+    "commit": "36f5aaef42744ed78b4d1525b03a7fb2168b363c"
+  },
+  "SPERR": {
+    "url": "https://github.com/NCAR/SPERR.git",
+    "path": "third_party/SPERR",
+    "commit": "9a16ab0ea3af8f4d534634a51d51d65acb9fcb37"
+  },
+  "SZ3": {
+    "url": "https://github.com/szcompressor/SZ3.git",
+    "path": "third_party/SZ3",
+    "commit": "0ebe6fa26b0aa2e274d13b78df81a81e2db1b268"
+  },
+  "ZFP": {
+    "url": "https://github.com/LLNL/zfp.git",
+    "path": "third_party/zfp",
+    "commit": "f40868a6a1c190c802e7d8b5987064f044bf7812"
+  },
+  "Falcons": {
+    "url": "https://github.com/opensdc-org/Falcons.git",
+    "path": "third_party/Falcons",
+    "commit": "c107f20463a157a2cc6024058108f6f592e58ea5"
+  }
+}

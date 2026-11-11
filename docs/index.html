@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="openSDC-Bench is an open scientific data compression benchmark suite. Compare compressors across datasets, error bounds, performance metrics, and scientific quality measures.">
+  <meta name="theme-color" content="#f5f2eb">
+  <title>openSDC-Bench · Open Scientific Data Compression Benchmark Suite</title>
+  <link rel="stylesheet" href="./site.css?v=11">
+  <script defer src="./site.js?v=12"></script>
+  <script defer src="./leaderboard.js?v=6"></script>
+</head>
+<body>
+  <a class="skip" href="#results">Skip to results</a>
+  <header class="site-header"><div class="top">
+    <a class="wordmark" href="./" aria-label="openSDC-Bench home"><span class="mark" aria-hidden="true">SDC</span> openSDC-Bench</a>
+    <nav aria-label="Main navigation">
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#results">Results</a>
+      <a href="#datasets">Datasets</a>
+      <a href="#methods">Methods</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+    <a class="repository" href="https://github.com/BingluCS/openSDC-Bench">GitHub ↗</a>
+  </div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="intro">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Open Scientific Data Compression Benchmark Suite</p>
+        <h1 id="intro">An open benchmark for <em>scientific data compression.</em></h1>
+        <p class="intro">Compare compressors fairly across scientific datasets using consistent, transparent evaluation protocols.</p>
+        <p class="hero-description">openSDC-Bench currently compares ZFP, PFPL, SPERR, SZ3.3, and Falcons across datasets and error bounds. Explore compression efficiency, speed, and scientific quality, and extend the suite with custom compressors and metrics.</p>
+        <div class="actions"><a class="button" href="#leaderboard">Explore leaderboard <span aria-hidden="true">↗</span></a><a class="quiet" href="#results">Browse figures <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-tags" aria-label="Benchmark principles"><span>Open &amp; reproducible</span><span>Matched error bounds</span><span>Extensible plugins</span></div>
+      </div>
+      <aside class="hero-board" aria-label="Explore the benchmark suite">
+        <div class="board-head"><span>EXPLORE THE SUITE</span><span>OPEN / AUDITABLE</span></div>
+        <div class="overview-grid">
+          <a class="overview-card" href="#datasets"><span class="overview-label">01 / DATASETS</span><strong>Scientific arrays <span aria-hidden="true">↗</span></strong><small>NYX · CESM · JHTDB · Hurricane · Miranda · SCALE</small></a>
+          <a class="overview-card" href="#results"><span class="overview-label">02 / PERFORMANCE</span><strong>Compression metrics <span aria-hidden="true">↗</span></strong><small>Ratio · throughput · rate–distortion</small></a>
+          <a class="overview-card" href="./?view_dataset=all&amp;view_figure=ssim_rd#results"><span class="overview-label">03 / QUALITY</span><strong>Scientific fidelity <span aria-hidden="true">↗</span></strong><small>PSNR · SSIM · correlation · spectra</small></a>
+          <a class="overview-card" href="#leaderboard"><span class="overview-label">04 / RANKINGS</span><strong>Open leaderboard <span aria-hidden="true">↗</span></strong><small>Compare by dataset, error bound and metric</small></a>
+        </div>
+        <div class="overview-extra"><span>DOMAIN &amp; DOWNSTREAM</span><p>Custom domain metrics are supported; downstream task evaluations are planned.</p></div>
+        <a class="board-link" href="#methods">Read the measurement protocol <span aria-hidden="true">↗</span></a>
+      </aside>
+    </section>
+
+    <section id="leaderboard" class="section" aria-labelledby="leaderboard-title">
+      <div class="section-head">
+        <div><p class="eyebrow">01 / Rankings</p><h2 id="leaderboard-title">The leaderboard</h2></div>
+        <p>Choose one dataset, error bound, and metric. Rankings compare results from the same audited protocol.</p>
+      </div>
+      <div class="leaderboard">
+        <div class="track-bar" role="group" aria-label="Compressor track">
+          <button type="button" id="track-general" class="track active" aria-pressed="true">General</button>
+          <button type="button" id="track-domain_specific" class="track" aria-pressed="false">Domain-specific</button>
+          <button type="button" id="track-particle" class="track" aria-pressed="false">Particle</button>
+        </div>
+        <div id="experiment-hardware" class="hardware-summary" aria-label="Experimental configuration">
+          <p>Experimental configuration</p>
+          <dl>
+            <div><dt>CPU</dt><dd>2 × Intel Xeon Gold 6530 · 2.10 GHz base</dd></div>
+            <div><dt>Memory</dt><dd>256 GiB DDR5-4800</dd></div>
+          </dl>
+        </div>
+        <div class="leaderboard-controls">
+          <label>Dataset <select id="rank-dataset"><option value="NYX">NYX</option></select></label>
+          <label>Error bound <select id="rank-bound"><option value="0.001">1E-3</option></select></label>
+          <label>Rank by <select id="rank-metric"><option value="ratio">Compression ratio</option></select></label>
+        </div>
+        <div class="rank-context"><div><p id="rank-context" role="status">Loading audited cohorts…</p><p id="rank-direction" class="rank-direction"></p></div><div class="context-actions"><a id="rank-permalink" href="#leaderboard">Link to this ranking ↗</a><a id="rank-explore-link" href="#results">Explore figures ↗</a><a href="./data/leaderboard.json?v=20261110-hardware-v1">Cohort data ↗</a></div></div>
+        <p id="rank-scroll-hint" class="scroll-hint">Scroll horizontally to see all metrics <span aria-hidden="true">→</span></p>
+        <div id="rank-scroll" class="table-scroll rank-scroll" tabindex="0" role="region" aria-label="Compressor leaderboard">
+          <table aria-describedby="rank-context">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Compressor</th><th scope="col" id="rank-score-heading">Selected metric</th><th scope="col" id="rank-col-ratio">Ratio</th><th scope="col" id="rank-col-compress_MiB_s">Compression<br>throughput (MiB/s)</th><th scope="col" id="rank-col-decompress_MiB_s">Decompression<br>throughput (MiB/s)</th><th scope="col" id="rank-col-psnr_db">PSNR dB</th><th scope="col" id="rank-col-ssim">SSIM</th><th scope="col" id="rank-col-spectral_l1">Spectral L1</th></tr></thead>
+            <tbody id="rank-body"><tr><td colspan="9">Loading leaderboard…</td></tr></tbody>
+          </table>
+        </div>
+        <p id="rank-empty" class="rank-empty" hidden></p>
+      </div>
+    </section>
+
+    <section id="results" class="section" aria-labelledby="results-title">
+      <div class="section-head">
+        <div><p class="eyebrow">02 / Results</p><h2 id="results-title">Benchmark explorer</h2></div>
+        <p>Compare compression performance and reconstruction fidelity by dataset.</p>
+      </div>
+      <div class="explorer">
+        <div class="controls">
+          <label>Dataset <select id="dataset"><option value="all">All datasets</option><option>NYX</option><option>Hurricane</option><option>Miranda</option><option>SCALE</option><option>CESM</option><option>JHTDB</option></select></label>
+          <label>View <select id="metric">
+            <optgroup label="Performance"><option value="ratio">Compression ratio table</option><option value="throughput">Compression &amp; decompression throughput</option><option value="pareto-compress">Pareto frontier · 1E-3</option></optgroup>
+            <optgroup label="Field fidelity (rate–distortion)"><option value="rd" selected>RD · PSNR</option></optgroup>
+          </select></label>
+        </div>
+        <div class="explorer-meta">
+          <p id="result-status" class="status">single threads</p>
+          <p class="figure-direction" role="status"><span id="figure-direction-arrow" aria-hidden="true">↖</span> <strong id="figure-direction-text">Upper left is better</strong></p>
+        </div>
+        <figure id="figure-view" class="plot" data-layout="strip">
+          <p class="plot-scroll-hint">Scroll horizontally to see all datasets <span aria-hidden="true">→</span></p>
+          <div id="figure-frame" class="plot-frame" tabindex="0" role="region" aria-label="Plot preview">
+            <a id="figure-image-link" href="./data/sdrbench/figures/datasets_rd.png?v=20261111-compact-v2" target="_blank" rel="noopener">
+              <img id="figure-image" src="./data/sdrbench/figures/datasets_rd.png?v=20261111-compact-v2" width="2966" height="610" loading="lazy" decoding="async" alt="PSNR rate–distortion curves with zoom insets for NYX, Hurricane, Miranda, SCALE, CESM, and JHTDB.">
+            </a>
+          </div>
+          <figcaption>
+            <span id="figure-description">PSNR versus bits per value for error bounds 1E-1 through 1E-5.</span>
+            <span class="figure-actions"><a id="figure-permalink" href="#results">Link to this view ↗</a><a id="figure-full-range" target="_blank" rel="noopener" hidden>Full rate range ↗</a><a id="figure-pdf" href="./data/sdrbench/figures/datasets_rd.pdf?v=20261111-compact-v2" target="_blank" rel="noopener">Open PDF ↗</a></span>
+          </figcaption>
+        </figure>
+        <section id="ratio-view" class="ratio-view" aria-labelledby="ratio-title" hidden>
+          <div class="ratio-heading">
+            <div><h3 id="ratio-title">Compression ratio</h3><p id="ratio-caption">Compression ratio (×) by range-relative error bound.</p></div>
+            <div class="figure-actions"><a id="ratio-permalink" href="#results">Link to this view ↗</a><a href="./data/sdrbench/summary_by_dataset.csv?v=20261111-compact-v2" download>Download CSV ↓</a></div>
+          </div>
+          <p class="scroll-hint">Scroll horizontally to see all error bounds <span aria-hidden="true">→</span></p>
+          <div class="table-scroll ratio-scroll" tabindex="0" role="region" aria-label="Compression ratios by error bound">
+            <table aria-describedby="ratio-caption">
+              <thead id="ratio-columns"><tr><th scope="col">Dataset</th><th scope="col">Codec</th><th scope="col">Error bound</th></tr></thead>
+              <tbody id="ratio-body"><tr><td colspan="3">Loading compression ratios…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="datasets" class="section" aria-labelledby="datasets-title">
+      <div class="section-head"><div><p class="eyebrow">03 / Datasets</p><h2 id="datasets-title">Data you can verify</h2></div>
+        <p>Reference arrays from SDRBench span cosmology, climate and simulation. Explore their sources, field selections and array layouts.</p></div>
+      <div class="dataset-grid">
+        <article><h3>NYX</h3><p>Cosmology simulation · 3D float32</p><a href="https://huggingface.co/datasets/sdrbench/nyx">Dataset source ↗</a></article>
+        <article><h3>CESM-ATM</h3><p>Atmospheric simulation · 2D float32</p><a href="https://huggingface.co/datasets/sdrbench/cesm-atm">Dataset source ↗</a></article>
+        <article><h3>Hurricane Isabel</h3><p>Weather simulation · 3D float32</p><a href="https://huggingface.co/datasets/sdrbench/hurricane-isabel">Dataset source ↗</a></article>
+        <article><h3>Miranda</h3><p>Fluid mixing simulation · 3D float64</p><a href="https://huggingface.co/datasets/sdrbench/miranda">Dataset source ↗</a></article>
+        <article><h3>SCALE-LETKF</h3><p>Atmospheric simulation · 3D float32</p><a href="https://huggingface.co/datasets/sdrbench/scale-letkf">Dataset source ↗</a></article>
+      </div>
+      <p class="dataset-note">The <a href="https://github.com/BingluCS/openSDC-Bench/blob/main/datasets/README.md">data access guide</a> describes the selected fields, layouts and types. <a href="https://github.com/BingluCS/openSDC-Bench/blob/main/datasets/sdrbench-fields.json">Browse the field list ↗</a></p>
+    </section>
+
+    <section id="methods" class="section" aria-labelledby="methods-title">
+      <div class="section-head"><div><p class="eyebrow">04 / Methods</p><h2 id="methods-title">What was measured</h2></div>
+        <p>Full arrays, one CPU thread, native compressor APIs, and independent pointwise error verification.</p></div>
+      <div class="method-grid">
+        <article><p class="eyebrow">Error bound</p><h3>Range-relative tolerance</h3><p class="formula">ε = α × (max(x) − min(x))</p><p>Each field is tested from 1E-1 through 1E-6. The verifier checks the reconstructed values against the original bound. Two all-zero CESM fields are excluded from this protocol.</p></article>
+        <article><p class="eyebrow">Timing</p><h3>API wall time</h3><p>Compression and decompression timers include configuration and allocation. Input I/O, startup, input copies and validation are outside the timer. Throughput is reported in MiB/s, where 1 MiB = 1,048,576 bytes.</p></article>
+        <article><p class="eyebrow">Aggregation</p><h3>Bytes and elapsed time</h3><p>Dataset ratio uses total input and compressed bytes. Throughput uses total input bytes and the sum of mean field times. RD uses element-weighted RMS normalized error. Miranda uses its original float64 arrays.</p></article>
+      </div>
+      <details id="protocol-details" class="method-note"><summary>Data policies, figure settings &amp; backend versions</summary><div class="method-details">
+        <p><strong>Quality curves.</strong> SSIM, PCC, spectral and spatial correlation use 1E-1 to 1E-5 and median field quality against the combined bit rate. SSIM and Pearson r use their original scores. Use Full rate range to see all measurements when the main chart shortens a high-rate plateau. Cross-variable plots use the combined rate of the participating fields. Verify physical co-location before interpreting them. Error autocorrelation is a diagnostic, not a universal error ranking.</p>
+        <p><strong>Figure settings.</strong> RD curves show 1E-1 to 1E-5. Throughput plots show 1E-2 to 1E-5. The Pareto frontier uses only 1E-3 and compares both compression and decompression throughput with compression ratio. The full set of bounds is available in the CSV files.</p>
+        <p><strong>Compressor tolerances.</strong> SPERR float32 uses a tighter tolerance to accommodate reconstruction rounding; one SZ3 configuration was retried with a slightly smaller tolerance. The verifier checks the nominal bound. Effective bounds and the adjustment are recorded in the downloads.</p>
+        <p><strong>Backend versions.</strong> The audited studies used the following pinned revisions.</p>
+        <ul id="backend-list" class="backend-list"></ul>
+      </div></details>
+    </section>
+
+    <section id="downloads" class="section" aria-labelledby="downloads-title">
+      <div class="section-head"><div><p class="eyebrow">05 / Downloads</p><h2 id="downloads-title">Results and audit files</h2></div>
+        <p>Download individual trial measurements, per-field summaries, and the published study audits.</p></div>
+      <div class="downloads">
+        <article><p class="download-label">01 / QUALITY</p><h3>Fidelity &amp; correlations</h3><p>Figure points, field-level quality and analysis protocol.</p>
+          <ul><li><a href="./data/quality/quality_rd_points.csv" download>Quality RD curve data <span>CSV ↓</span></a></li><li><a href="./data/quality/points.csv" download>Quality by field <span>CSV ↓</span></a></li><li><a href="./data/quality/cross_variable_summary.csv" download>Cross-variable correlations <span>CSV ↓</span></a></li><li><a href="./data/quality/rd_manifest.json?v=20261111-fidelity-v3">Quality figure protocol <span>JSON ↗</span></a></li><li><a href="./data/quality/audit.json">Quality audit <span>JSON ↗</span></a></li></ul>
+        </article>
+        <article><p class="download-label">02 / MEASUREMENTS</p><h3 id="sdrbench-download-title">SDRBench</h3><p id="sdrbench-download-detail">Scientific array measurements</p>
+          <ul><li><a href="./data/sdrbench/measurements.zip?v=20261111-compact-v2" download>Measurements and warmups <span>ZIP ↓</span></a></li><li><a href="./data/sdrbench/summary_by_field.csv?v=20261111-compact-v2" download>Per-field summary <span>CSV ↓</span></a></li><li><a href="./data/sdrbench/summary_by_dataset.csv?v=20261111-compact-v2" download>Dataset summary <span>CSV ↓</span></a></li><li><a href="./data/sdrbench/summary_overall.csv?v=20261111-compact-v2" download>Overall summary <span>CSV ↓</span></a></li><li><a href="./data/sdrbench/pareto_1e-3.csv?v=20261111-compact-v2" download>Pareto at 1E-3 <span>CSV ↓</span></a></li><li><a href="./data/sdrbench/audit.json?v=20261111-compact-v2">Measurement audit <span>JSON ↗</span></a></li></ul>
+        </article>
+        <article><p class="download-label">03 / REPRODUCIBILITY</p><h3>Sources &amp; checks</h3><p>Pinned source and earlier Python checks using adapter-call timing.</p>
+          <ul><li><a href="./data/sdrbench/native-source.bundle?v=20261111-compact-v2" download>Native source snapshot <span>Git bundle ↓</span></a></li><li><a href="./data/sdrbench/hurricane-log-preferred.zip?v=20261111-compact-v2" download>Hurricane log10-preferred view <span>ZIP ↓</span></a></li><li><a href="./data/python-smoke/server-summary.csv" download>Python cropped-field summary <span>CSV ↓</span></a></li><li><a href="./data/python-smoke/plugin-validation.csv" download>Plugin validation <span>CSV ↓</span></a></li><li><a href="./data/python-smoke/hurricane-crop-3cec3809.png">Hurricane crop figure <span>PNG ↗</span></a></li><li><a href="./data/python-smoke/miranda-crop-b260b6c5.png">Miranda crop figure <span>PNG ↗</span></a></li><li><a href="./data/python-smoke/nyx-crop-817a7ba7.png">NYX crop figure <span>PNG ↗</span></a></li><li><a href="./data/python-smoke/plugin-hurricane-crop-3cec3809.png">Plugin smoke figure <span>PNG ↗</span></a></li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="contribute" aria-labelledby="contribute-title">
+      <div><p class="eyebrow">An open community</p><h2 id="contribute-title">Build the benchmark together.</h2><p>Fork the code and contribute compressors, datasets, metrics, reproducibility checks, or website improvements. Audited results are reviewed before publication.</p></div>
+      <div class="contribute-links"><a href="https://github.com/BingluCS/openSDC-Bench/fork">Fork the benchmark ↗</a><a href="https://github.com/BingluCS/openSDC-Bench/blob/main/CONTRIBUTING.md">Contribution guide ↗</a><a href="https://github.com/BingluCS/openSDC-Bench/tree/main/native">Native benchmark source ↗</a><a href="https://github.com/BingluCS/openSDC-Bench/tree/main/quality">Quality analysis source ↗</a><a href="https://github.com/BingluCS/openSDC-Bench-site">Website source ↗</a></div>
+    </section>
+  </main>
+  <footer class="footer wrap"><a class="wordmark" href="./"><span class="mark" aria-hidden="true">SDC</span> openSDC-Bench</a><a href="https://github.com/BingluCS/openSDC-Bench">Project repository ↗</a></footer>
+</body>
+</html>

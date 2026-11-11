@@ -1,0 +1,569 @@
+{
+  "schema_version": 1,
+  "alphas": [
+    0.1,
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+  ],
+  "codecs": [
+    "ZFP",
+    "PFPL",
+    "SPERR",
+    "SZ3",
+    "Falcons"
+  ],
+  "compression_threads": 1,
+  "error_mode": "alpha * (max(original)-min(original)); native-alpha preserves prior rounding repair",
+  "metric_options": {
+    "ssim_window": 7,
+    "ssim_stride": 4,
+    "boundary": "valid",
+    "lags": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "spectrum_spacing_grid_cells": [
+      1,
+      1,
+      1
+    ],
+    "spectrum_bins": 64,
+    "spectrum_demean": true,
+    "spectrum_window": "rectangular"
+  },
+  "fields": [
+    {
+      "dataset": "Miranda",
+      "field": "density"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "diffusivity"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "pressure"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityx"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityy"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityz"
+    },
+    {
+      "dataset": "Miranda",
+      "field": "viscocity"
+    },
+    {
+      "dataset": "CESM",
+      "field": "AEROD_v_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDHGH_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDLOW_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDMED_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDTOT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLDSC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLDS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNSC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNTC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLUTC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLUT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FREQSH_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FREQZM_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDSC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDTOA_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNSC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTOAC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTOA_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSUTOA_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ICEFRAC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "LANDFRAC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "LHFLX_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "LWCF_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "OCNFRAC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_SSLTA_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_SSLTC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_bcar1_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_bcar2_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust1_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust2_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust3_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust4_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_ocar1_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_ocar2_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_sulf_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PBLH_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PCONVB_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PCONVT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PHIS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECCDZM_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECL_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSC_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSH_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSL_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PSL_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "PS_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "QFLX_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "QREFHT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "RHREFHT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SHFLX_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SNOWHICE_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SNOWHLND_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SOLIN_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SRFRAD_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SWCF_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TAUX_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TAUY_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TGCLDIWP_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TGCLDLWP_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TMQ_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFHT_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFMNAV_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFMXAV_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_P_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_T_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_Z_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TSMN_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TSMX_1_1800_3600"
+    },
+    {
+      "dataset": "CESM",
+      "field": "TS_1_1800_3600"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "0500_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "1000_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "1500_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "2000_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "2500_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "3000_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "3500_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "4000_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "4500_pressure"
+    },
+    {
+      "dataset": "JHTDB",
+      "field": "5000_pressure"
+    },
+    {
+      "dataset": "NYX",
+      "field": "baryon_density"
+    },
+    {
+      "dataset": "NYX",
+      "field": "dark_matter_density"
+    },
+    {
+      "dataset": "NYX",
+      "field": "temperature"
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_x"
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_y"
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_z"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "PRES-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QC-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QG-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QI-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QR-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QS-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QV-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "RH-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "T-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "U-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "V-98x1200x1200"
+    },
+    {
+      "dataset": "SCALE",
+      "field": "W-98x1200x1200"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "CLOUDf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "CLOUDf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "PRECIPf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "PRECIPf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Pf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QCLOUDf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QCLOUDf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QGRAUPf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QGRAUPf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QICEf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QICEf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QRAINf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QRAINf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QSNOWf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QSNOWf48.log10.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QVAPORf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "TCf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Uf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Vf48.bin"
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Wf48.bin"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "expected_points": 3960,
+  "actual_points": 3960,
+  "missing_points": 0,
+  "expected_cross_matrices": 90,
+  "actual_cross_matrices": 90,
+  "missing_cross_matrices": 0,
+  "metric_status_counts": {
+    "nrmse_status:0": 3960,
+    "psnr_status:0": 3955,
+    "pcc_status:0": 3960,
+    "ssim_status:0": 3960,
+    "spectrum_status:0": 3960,
+    "acf_original:0": 38280,
+    "acf_reconstructed:0": 38280,
+    "acf_error:0": 38240,
+    "psnr_status:6": 5,
+    "acf_error:3": 40
+  },
+  "error_count": 0,
+  "errors": []
+}

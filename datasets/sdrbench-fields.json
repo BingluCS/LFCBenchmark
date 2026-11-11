@@ -1,0 +1,1485 @@
+{
+  "schema_version": 1,
+  "description": "Input fields in the published five-dataset reference subset.",
+  "sources": {
+    "NYX": "https://huggingface.co/datasets/sdrbench/nyx",
+    "CESM": "https://huggingface.co/datasets/sdrbench/cesm-atm",
+    "Hurricane": "https://huggingface.co/datasets/sdrbench/hurricane-isabel",
+    "Miranda": "https://huggingface.co/datasets/sdrbench/miranda",
+    "SCALE": "https://huggingface.co/datasets/sdrbench/scale-letkf"
+  },
+  "byte_order": "little-endian",
+  "array_order": "C",
+  "fields": [
+    {
+      "dataset": "Miranda",
+      "field": "density",
+      "path": "Miranda/density.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "diffusivity",
+      "path": "Miranda/diffusivity.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "pressure",
+      "path": "Miranda/pressure.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityx",
+      "path": "Miranda/velocityx.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityy",
+      "path": "Miranda/velocityy.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "velocityz",
+      "path": "Miranda/velocityz.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "Miranda",
+      "field": "viscocity",
+      "path": "Miranda/viscocity.d64",
+      "dtype": "float64",
+      "shape": [
+        256,
+        384,
+        384
+      ],
+      "bytes": 301989888
+    },
+    {
+      "dataset": "CESM",
+      "field": "AEROD_v_1_1800_3600",
+      "path": "CESM/AEROD_v_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDHGH_1_1800_3600",
+      "path": "CESM/CLDHGH_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDLOW_1_1800_3600",
+      "path": "CESM/CLDLOW_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDMED_1_1800_3600",
+      "path": "CESM/CLDMED_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "CLDTOT_1_1800_3600",
+      "path": "CESM/CLDTOT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLDSC_1_1800_3600",
+      "path": "CESM/FLDSC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLDS_1_1800_3600",
+      "path": "CESM/FLDS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNSC_1_1800_3600",
+      "path": "CESM/FLNSC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNS_1_1800_3600",
+      "path": "CESM/FLNS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNTC_1_1800_3600",
+      "path": "CESM/FLNTC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLNT_1_1800_3600",
+      "path": "CESM/FLNT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLUTC_1_1800_3600",
+      "path": "CESM/FLUTC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FLUT_1_1800_3600",
+      "path": "CESM/FLUT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FREQSH_1_1800_3600",
+      "path": "CESM/FREQSH_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FREQZM_1_1800_3600",
+      "path": "CESM/FREQZM_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDSC_1_1800_3600",
+      "path": "CESM/FSDSC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDS_1_1800_3600",
+      "path": "CESM/FSDS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSDTOA_1_1800_3600",
+      "path": "CESM/FSDTOA_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNSC_1_1800_3600",
+      "path": "CESM/FSNSC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNS_1_1800_3600",
+      "path": "CESM/FSNS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTC_1_1800_3600",
+      "path": "CESM/FSNTC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTOAC_1_1800_3600",
+      "path": "CESM/FSNTOAC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNTOA_1_1800_3600",
+      "path": "CESM/FSNTOA_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSNT_1_1800_3600",
+      "path": "CESM/FSNT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "FSUTOA_1_1800_3600",
+      "path": "CESM/FSUTOA_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ICEFRAC_1_1800_3600",
+      "path": "CESM/ICEFRAC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "LANDFRAC_1_1800_3600",
+      "path": "CESM/LANDFRAC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "LHFLX_1_1800_3600",
+      "path": "CESM/LHFLX_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "LWCF_1_1800_3600",
+      "path": "CESM/LWCF_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "OCNFRAC_1_1800_3600",
+      "path": "CESM/OCNFRAC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_SSLTA_1_1800_3600",
+      "path": "CESM/ODV_SSLTA_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_SSLTC_1_1800_3600",
+      "path": "CESM/ODV_SSLTC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_bcar1_1_1800_3600",
+      "path": "CESM/ODV_bcar1_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_bcar2_1_1800_3600",
+      "path": "CESM/ODV_bcar2_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust1_1_1800_3600",
+      "path": "CESM/ODV_dust1_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust2_1_1800_3600",
+      "path": "CESM/ODV_dust2_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust3_1_1800_3600",
+      "path": "CESM/ODV_dust3_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_dust4_1_1800_3600",
+      "path": "CESM/ODV_dust4_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_ocar1_1_1800_3600",
+      "path": "CESM/ODV_ocar1_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_ocar2_1_1800_3600",
+      "path": "CESM/ODV_ocar2_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "ODV_sulf_1_1800_3600",
+      "path": "CESM/ODV_sulf_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PBLH_1_1800_3600",
+      "path": "CESM/PBLH_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PCONVB_1_1800_3600",
+      "path": "CESM/PCONVB_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PCONVT_1_1800_3600",
+      "path": "CESM/PCONVT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PHIS_1_1800_3600",
+      "path": "CESM/PHIS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECCDZM_1_1800_3600",
+      "path": "CESM/PRECCDZM_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECC_1_1800_3600",
+      "path": "CESM/PRECC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECL_1_1800_3600",
+      "path": "CESM/PRECL_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSC_1_1800_3600",
+      "path": "CESM/PRECSC_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSH_1_1800_3600",
+      "path": "CESM/PRECSH_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECSL_1_1800_3600",
+      "path": "CESM/PRECSL_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PRECT_1_1800_3600",
+      "path": "CESM/PRECT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PSL_1_1800_3600",
+      "path": "CESM/PSL_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "PS_1_1800_3600",
+      "path": "CESM/PS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "QFLX_1_1800_3600",
+      "path": "CESM/QFLX_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "QREFHT_1_1800_3600",
+      "path": "CESM/QREFHT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "RHREFHT_1_1800_3600",
+      "path": "CESM/RHREFHT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SHFLX_1_1800_3600",
+      "path": "CESM/SHFLX_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SNOWHICE_1_1800_3600",
+      "path": "CESM/SNOWHICE_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SNOWHLND_1_1800_3600",
+      "path": "CESM/SNOWHLND_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SOLIN_1_1800_3600",
+      "path": "CESM/SOLIN_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SRFRAD_1_1800_3600",
+      "path": "CESM/SRFRAD_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "SWCF_1_1800_3600",
+      "path": "CESM/SWCF_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TAUX_1_1800_3600",
+      "path": "CESM/TAUX_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TAUY_1_1800_3600",
+      "path": "CESM/TAUY_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TGCLDIWP_1_1800_3600",
+      "path": "CESM/TGCLDIWP_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TGCLDLWP_1_1800_3600",
+      "path": "CESM/TGCLDLWP_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TMQ_1_1800_3600",
+      "path": "CESM/TMQ_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFHT_1_1800_3600",
+      "path": "CESM/TREFHT_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFMNAV_1_1800_3600",
+      "path": "CESM/TREFMNAV_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TREFMXAV_1_1800_3600",
+      "path": "CESM/TREFMXAV_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_P_1_1800_3600",
+      "path": "CESM/TROP_P_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_T_1_1800_3600",
+      "path": "CESM/TROP_T_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TROP_Z_1_1800_3600",
+      "path": "CESM/TROP_Z_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TSMN_1_1800_3600",
+      "path": "CESM/TSMN_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TSMX_1_1800_3600",
+      "path": "CESM/TSMX_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "CESM",
+      "field": "TS_1_1800_3600",
+      "path": "CESM/TS_1_1800_3600.f32",
+      "dtype": "float32",
+      "shape": [
+        1,
+        1800,
+        3600
+      ],
+      "bytes": 25920000
+    },
+    {
+      "dataset": "NYX",
+      "field": "baryon_density",
+      "path": "NYX/baryon_density.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "NYX",
+      "field": "dark_matter_density",
+      "path": "NYX/dark_matter_density.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "NYX",
+      "field": "temperature",
+      "path": "NYX/temperature.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_x",
+      "path": "NYX/velocity_x.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_y",
+      "path": "NYX/velocity_y.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "NYX",
+      "field": "velocity_z",
+      "path": "NYX/velocity_z.f32",
+      "dtype": "float32",
+      "shape": [
+        512,
+        512,
+        512
+      ],
+      "bytes": 536870912
+    },
+    {
+      "dataset": "SCALE",
+      "field": "PRES-98x1200x1200",
+      "path": "SCALE/PRES-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QC-98x1200x1200",
+      "path": "SCALE/QC-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QG-98x1200x1200",
+      "path": "SCALE/QG-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QI-98x1200x1200",
+      "path": "SCALE/QI-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QR-98x1200x1200",
+      "path": "SCALE/QR-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QS-98x1200x1200",
+      "path": "SCALE/QS-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "QV-98x1200x1200",
+      "path": "SCALE/QV-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "RH-98x1200x1200",
+      "path": "SCALE/RH-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "T-98x1200x1200",
+      "path": "SCALE/T-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "U-98x1200x1200",
+      "path": "SCALE/U-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "V-98x1200x1200",
+      "path": "SCALE/V-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "SCALE",
+      "field": "W-98x1200x1200",
+      "path": "SCALE/W-98x1200x1200.f32",
+      "dtype": "float32",
+      "shape": [
+        98,
+        1200,
+        1200
+      ],
+      "bytes": 564480000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "CLOUDf48.bin",
+      "path": "Hurricane/CLOUDf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "CLOUDf48.log10.bin",
+      "path": "Hurricane/CLOUDf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "PRECIPf48.bin",
+      "path": "Hurricane/PRECIPf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "PRECIPf48.log10.bin",
+      "path": "Hurricane/PRECIPf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Pf48.bin",
+      "path": "Hurricane/Pf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QCLOUDf48.bin",
+      "path": "Hurricane/QCLOUDf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QCLOUDf48.log10.bin",
+      "path": "Hurricane/QCLOUDf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QGRAUPf48.bin",
+      "path": "Hurricane/QGRAUPf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QGRAUPf48.log10.bin",
+      "path": "Hurricane/QGRAUPf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QICEf48.bin",
+      "path": "Hurricane/QICEf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QICEf48.log10.bin",
+      "path": "Hurricane/QICEf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QRAINf48.bin",
+      "path": "Hurricane/QRAINf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QRAINf48.log10.bin",
+      "path": "Hurricane/QRAINf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QSNOWf48.bin",
+      "path": "Hurricane/QSNOWf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QSNOWf48.log10.bin",
+      "path": "Hurricane/QSNOWf48.log10.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "QVAPORf48.bin",
+      "path": "Hurricane/QVAPORf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "TCf48.bin",
+      "path": "Hurricane/TCf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Uf48.bin",
+      "path": "Hurricane/Uf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Vf48.bin",
+      "path": "Hurricane/Vf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    },
+    {
+      "dataset": "Hurricane",
+      "field": "Wf48.bin",
+      "path": "Hurricane/Wf48.bin.f32",
+      "dtype": "float32",
+      "shape": [
+        100,
+        500,
+        500
+      ],
+      "bytes": 100000000
+    }
+  ],
+  "notes": [
+    "Miranda is the original float64 data.",
+    "Hurricane includes original and supplied log10 fields.",
+    "The two constant CESM fields are excluded from range-relative analysis.",
+    "JHTDB distribution is deferred; existing results remain available."
+  ]
+}

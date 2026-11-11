@@ -1,0 +1,15 @@
+[submodule "third_party/PFPL"]
+	path = third_party/PFPL
+	url = https://github.com/burtscher/PFPL.git
+[submodule "third_party/SPERR"]
+	path = third_party/SPERR
+	url = https://github.com/NCAR/SPERR.git
+[submodule "third_party/SZ3"]
+	path = third_party/SZ3
+	url = https://github.com/szcompressor/SZ3.git
+[submodule "third_party/zfp"]
+	path = third_party/zfp
+	url = https://github.com/LLNL/zfp.git
+[submodule "third_party/Falcons"]
+	path = third_party/Falcons
+	url = https://github.com/opensdc-org/Falcons.git

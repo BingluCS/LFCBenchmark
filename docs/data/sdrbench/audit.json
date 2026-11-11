@@ -1,0 +1,38 @@
+{
+  "name": "SDRBench",
+  "repetitions": 1,
+  "warmups_per_point": 1,
+  "fields": 132,
+  "jobs": 660,
+  "measurements": 3960,
+  "warmups": 3960,
+  "max_threads": 1,
+  "strict_bound_violations": 0,
+  "input_hashes_rechecked": true,
+  "excluded_fields": [
+    {
+      "dataset": "CESM",
+      "field": "SFCLDICE_1_1800_3600",
+      "reason": "zero value range; range-relative bound and PSNR undefined"
+    },
+    {
+      "dataset": "CESM",
+      "field": "SFCLDLIQ_1_1800_3600",
+      "reason": "zero value range; range-relative bound and PSNR undefined"
+    }
+  ],
+  "rounding_adjustments": [
+    {
+      "dataset": "Hurricane",
+      "field": "QICEf48.bin",
+      "codec": "SZ3",
+      "alpha": 0.0001,
+      "nominal_bound": 8.46363778691739e-08,
+      "effective_bound": 8.463636902433791e-08,
+      "native_alpha": 9.999998954960479e-05
+    }
+  ],
+  "cpu": "INTEL(R) XEON(R) GOLD 6530",
+  "timing_scope": "native adapter operation including configuration/allocation; excludes input copy, file I/O, process startup, validation and final output destruction",
+  "native_benchmark_revision": "deb9e2c7d4aae95e7fd6e52623c8c5cbe8a5ecfd"
+}

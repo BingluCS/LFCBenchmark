@@ -1,0 +1,13 @@
+.venv/
+.native-deps/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+install/
+results/
+*.so
+*.dylib
+.DS_Store

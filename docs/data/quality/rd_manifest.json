@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "bounds": [
+    0.1,
+    0.01,
+    0.001,
+    0.0001,
+    1e-05
+  ],
+  "datasets": [
+    "NYX",
+    "Hurricane",
+    "Miranda",
+    "SCALE",
+    "CESM",
+    "JHTDB"
+  ],
+  "cross_datasets": [
+    "NYX",
+    "Hurricane",
+    "Miranda"
+  ],
+  "metrics": {
+    "ssim_rd": {
+      "label": "SSIM",
+      "column": "ssim",
+      "scale": "linear",
+      "description": "Median field SSIM versus combined bits/value."
+    },
+    "ssim_loss_rd": {
+      "label": "1 \u2212 SSIM",
+      "column": "ssim",
+      "transform": "one_minus",
+      "scale": "log",
+      "description": "Median 1\u2212SSIM versus combined bits/value; smaller is better."
+    },
+    "pcc_rd": {
+      "label": "Pearson r",
+      "column": "pcc",
+      "scale": "linear",
+      "description": "Median Pearson correlation between original and reconstructed fields versus combined bits/value."
+    },
+    "nrmse_rd": {
+      "label": "NRMSE",
+      "column": "nrmse",
+      "scale": "log",
+      "description": "Median range-normalized RMSE versus combined bits/value. NRMSE and PSNR are mathematically related."
+    },
+    "spectral_l1_rd": {
+      "label": "Relative spectral power L1",
+      "column": "power_relative_l1",
+      "scale": "log",
+      "description": "Median full-grid relative spectral power L1 error versus combined bits/value; this is not fraction of energy lost."
+    },
+    "spectral_l2_rd": {
+      "label": "Relative spectral power L2",
+      "column": "power_relative_l2",
+      "scale": "log",
+      "description": "Median full-grid relative spectral power L2 error versus combined bits/value."
+    },
+    "fourier_l2_rd": {
+      "label": "Relative Fourier L2",
+      "column": "fourier_relative_l2",
+      "scale": "log",
+      "description": "Median phase-sensitive relative Fourier L2 versus combined bits/value; Parseval links it to spatial L2."
+    },
+    "field_acf_rd": {
+      "label": "Mean |\u0394 field ACF|",
+      "column": "field_acf_mean_abs_delta",
+      "scale": "log",
+      "description": "Median field ACF change averaged across axes and lags 1, 2, 4, 8, versus combined bits/value."
+    },
+    "error_acf_rd": {
+      "label": "Mean |error ACF|",
+      "column": "error_acf_mean_abs",
+      "scale": "log",
+      "description": "Median absolute error ACF averaged across axes and lags 1, 2, 4, 8. It is a diagnostic, not a universal distortion score."
+    },
+    "cross_mean_rd": {
+      "label": "Mean |\u0394 cross-variable PCC|",
+      "column": "mean_absolute_delta",
+      "scale": "log",
+      "cross": true,
+      "description": "Mean absolute change across variable pairs versus bit rate combined over the participating variables."
+    },
+    "cross_max_rd": {
+      "label": "Max |\u0394 cross-variable PCC|",
+      "column": "max_absolute_delta",
+      "scale": "log",
+      "cross": true,
+      "description": "Maximum absolute change across variable pairs versus bit rate combined over the participating variables."
+    }
+  },
+  "figures": [
+    "CESM_error_acf_rd",
+    "CESM_field_acf_rd",
+    "CESM_fourier_l2_rd",
+    "CESM_nrmse_rd",
+    "CESM_pcc_rd",
+    "CESM_spectral_l1_rd",
+    "CESM_spectral_l2_rd",
+    "CESM_ssim_loss_rd",
+    "CESM_ssim_rd",
+    "Hurricane_cross_max_rd",
+    "Hurricane_cross_mean_rd",
+    "Hurricane_error_acf_rd",
+    "Hurricane_field_acf_rd",
+    "Hurricane_fourier_l2_rd",
+    "Hurricane_nrmse_rd",
+    "Hurricane_pcc_rd",
+    "Hurricane_spectral_l1_rd",
+    "Hurricane_spectral_l2_rd",
+    "Hurricane_ssim_loss_rd",
+    "Hurricane_ssim_rd",
+    "JHTDB_error_acf_rd",
+    "JHTDB_field_acf_rd",
+    "JHTDB_fourier_l2_rd",
+    "JHTDB_nrmse_rd",
+    "JHTDB_pcc_rd",
+    "JHTDB_spectral_l1_rd",
+    "JHTDB_spectral_l2_rd",
+    "JHTDB_ssim_loss_rd",
+    "JHTDB_ssim_rd",
+    "Miranda_cross_max_rd",
+    "Miranda_cross_mean_rd",
+    "Miranda_error_acf_rd",
+    "Miranda_field_acf_rd",
+    "Miranda_fourier_l2_rd",
+    "Miranda_nrmse_rd",
+    "Miranda_pcc_rd",
+    "Miranda_spectral_l1_rd",
+    "Miranda_spectral_l2_rd",
+    "Miranda_ssim_loss_rd",
+    "Miranda_ssim_rd",
+    "NYX_cross_max_rd",
+    "NYX_cross_mean_rd",
+    "NYX_error_acf_rd",
+    "NYX_field_acf_rd",
+    "NYX_fourier_l2_rd",
+    "NYX_nrmse_rd",
+    "NYX_pcc_rd",
+    "NYX_spectral_l1_rd",
+    "NYX_spectral_l2_rd",
+    "NYX_ssim_loss_rd",
+    "NYX_ssim_rd",
+    "SCALE_error_acf_rd",
+    "SCALE_field_acf_rd",
+    "SCALE_fourier_l2_rd",
+    "SCALE_nrmse_rd",
+    "SCALE_pcc_rd",
+    "SCALE_spectral_l1_rd",
+    "SCALE_spectral_l2_rd",
+    "SCALE_ssim_loss_rd",
+    "SCALE_ssim_rd",
+    "datasets_cross_max_rd",
+    "datasets_cross_mean_rd",
+    "datasets_error_acf_rd",
+    "datasets_field_acf_rd",
+    "datasets_fourier_l2_rd",
+    "datasets_nrmse_rd",
+    "datasets_pcc_rd",
+    "datasets_spectral_l1_rd",
+    "datasets_spectral_l2_rd",
+    "datasets_ssim_loss_rd",
+    "datasets_ssim_rd"
+  ],
+  "full_range_figures": [
+    "CESM_pcc_rd_full",
+    "CESM_ssim_rd_full",
+    "Hurricane_pcc_rd_full",
+    "Hurricane_ssim_rd_full",
+    "JHTDB_pcc_rd_full",
+    "JHTDB_ssim_rd_full",
+    "Miranda_pcc_rd_full",
+    "Miranda_ssim_rd_full",
+    "NYX_pcc_rd_full",
+    "NYX_ssim_rd_full",
+    "SCALE_pcc_rd_full",
+    "SCALE_ssim_rd_full",
+    "datasets_pcc_rd_full",
+    "datasets_ssim_rd_full"
+  ],
+  "zoomed_bit_rates": {
+    "ssim_rd": {
+      "NYX": 1.257446655035019,
+      "Hurricane": 2.25088198272,
+      "Miranda": 1.5550512150355749,
+      "SCALE": 1.2740179591836736,
+      "CESM": 2.744806,
+      "JHTDB": 2.89791872048378
+    },
+    "pcc_rd": {
+      "NYX": 3.088195434808731,
+      "Hurricane": 2.25088198272,
+      "Miranda": 1.5550512150355749,
+      "SCALE": 1.2740179591836736,
+      "CESM": 2.744806,
+      "JHTDB": 2.89791872048378
+    }
+  },
+  "correlation_display": "SSIM and Pearson r use their original scores on linear axes. In the focused view each curve ends at the first point of its sustained 0.999 plateau and keeps at least two points. The rate axis has 8% padding. The focused view is used when it shortens the rate axis by at least 10%. Full-range figures and the CSV show all measured points.",
+  "field_counts": {
+    "NYX": 6,
+    "Hurricane": 20,
+    "Miranda": 7,
+    "SCALE": 12,
+    "CESM": 64,
+    "JHTDB": 10
+  },
+  "excluded_fields": [
+    "CESM/AEROD_v_1_1800_3600",
+    "CESM/ODV_SSLTA_1_1800_3600",
+    "CESM/ODV_SSLTC_1_1800_3600",
+    "CESM/ODV_bcar1_1_1800_3600",
+    "CESM/ODV_bcar2_1_1800_3600",
+    "CESM/ODV_dust1_1_1800_3600",
+    "CESM/ODV_dust2_1_1800_3600",
+    "CESM/ODV_dust3_1_1800_3600",
+    "CESM/ODV_dust4_1_1800_3600",
+    "CESM/ODV_ocar1_1_1800_3600",
+    "CESM/ODV_ocar2_1_1800_3600",
+    "CESM/ODV_sulf_1_1800_3600",
+    "CESM/SOLIN_1_1800_3600"
+  ],
+  "cross_fields": {
+    "NYX": [
+      "baryon_density",
+      "dark_matter_density",
+      "temperature",
+      "velocity_x",
+      "velocity_y",
+      "velocity_z"
+    ],
+    "Hurricane": [
+      "CLOUDf48.bin",
+      "PRECIPf48.bin",
+      "Pf48.bin",
+      "QCLOUDf48.bin",
+      "QGRAUPf48.bin",
+      "QICEf48.bin",
+      "QRAINf48.bin",
+      "QSNOWf48.bin",
+      "QVAPORf48.bin",
+      "TCf48.bin",
+      "Uf48.bin",
+      "Vf48.bin",
+      "Wf48.bin"
+    ],
+    "Miranda": [
+      "density",
+      "velocityx",
+      "velocityy",
+      "velocityz"
+    ]
+  },
+  "source_audit": "./data/quality/audit.json",
+  "quality_points_sha256": "7cd5a405c8ebd0a0d2e29f07213d2f7975e5f70df8be177dea089bf2bfd154e0",
+  "baseline_summary_sha256": "45f6844552b32f9bee7260dd8ee27ab86184d0a9329222d92a0047d8ade9beee",
+  "aggregation": "Combined bit rate: 8 \u00d7 sum(mean compressed bytes) / sum(elements); single-field metrics: median over the same fields; cross-variable metrics: mean or max absolute pair change.",
+  "cross_note": "Cross-variable bit rates combine only the fields in each audited correlation matrix; index alignment does not establish physical co-location.",
+  "ssim_note": "Uniform 7-cell windows per axis, stride 4; valid windows. A singleton leading dimension is analyzed as 2D. SSIM loss is 1\u2212SSIM.",
+  "spectral_note": "Full-grid FFT, mean removed, rectangular window and unit grid spacing. Power L1 is not energy loss.",
+  "acf_note": "Valid boundaries; lags 1, 2, 4, 8 by axis. Error ACF is diagnostic and has no universal optimization direction."
+}

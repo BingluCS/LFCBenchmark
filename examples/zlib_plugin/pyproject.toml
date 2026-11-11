@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lfcb-example-zlib-plugin"
+version = "0.1.0"
+description = "Example third-party LFCBenchmark compressor plugin"
+requires-python = ">=3.10"
+dependencies = ["lfcbenchmark>=0.1,<0.2"]
+
+[project.entry-points."lfcbenchmark.compressors"]
+"example.zlib" = "lfcb_example_zlib:ZlibCompressor"
+
+[tool.setuptools]
+py-modules = ["lfcb_example_zlib"]

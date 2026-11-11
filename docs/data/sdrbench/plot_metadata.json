@@ -1,0 +1,48 @@
+{
+  "style_reference": "SZ-analysis.ipynb (serial throughput, ratio, rate-distortion, ratio/throughput)",
+  "dataset_order": [
+    "NYX",
+    "Hurricane",
+    "Miranda",
+    "SCALE",
+    "CESM",
+    "JHTDB"
+  ],
+  "compressor_order": [
+    "ZFP",
+    "PFPL",
+    "SPERR",
+    "SZ3",
+    "Falcons"
+  ],
+  "error_bounds": [
+    0.1,
+    0.01,
+    0.001,
+    0.0001,
+    1e-05,
+    1e-06
+  ],
+  "repetitions": 1,
+  "rd_figure_bounds": [
+    0.1,
+    0.01,
+    0.001,
+    0.0001,
+    1e-05
+  ],
+  "throughput_figure_bounds": [
+    0.01,
+    0.001,
+    0.0001,
+    1e-05
+  ],
+  "pareto_figure_bound": 0.001,
+  "hurricane_aggregation": "all tested representations",
+  "hurricane_excluded_from_aggregates": [],
+  "per_field_csv_contains_all_tested_fields": true,
+  "throughput_units": "MiB/s (1 MiB = 1048576 bytes)",
+  "throughput_aggregation": "total input bytes / sum of per-field mean times",
+  "ratio_aggregation": "total input bytes / total compressed bytes",
+  "psnr_aggregation": "-20 log10(element-weighted RMS of normalized field RMSE)"
+}
