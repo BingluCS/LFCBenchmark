@@ -1,8 +1,8 @@
-# openSDC-Bench
+# OpenSDC-Bench
 
 **Open Scientific Data Compression Benchmark Suite**
 
-openSDC-Bench 是一个面向科学数据压缩的开放、可扩展评测套件。它在公开的统一评测协议下，比较不同压缩方法在多种科学数据和误差界上的压缩率、吞吐量与重建质量，帮助研究者观察不同方法的表现和权衡。排行榜按数据集、误差界和指标组织可比较的结果，测量记录、数据处理规则和压缩器版本可供核查。
+OpenSDC-Bench 是一个面向科学数据压缩的开放、可扩展评测套件。它在公开的统一评测协议下，比较不同压缩方法在多种科学数据和误差界上的压缩率、吞吐量与重建质量，帮助研究者观察不同方法的表现和权衡。排行榜按数据集、误差界和指标组织可比较的结果，测量记录、数据处理规则和压缩器版本可供核查。
 
 当前结果覆盖 SDRBench 的 NYX、CESM、JHTDB、Hurricane、Miranda 和 SCALE，以及 ZFP、PFPL、SPERR、SZ3 和 Falcons。除 PSNR、NRMSE 和 SSIM 外，套件还提供相关性、自相关和频谱等质量分析。支持注册自定义压缩器与领域指标；具体下游任务评测仍在规划中。
 
@@ -16,11 +16,11 @@ Python 接口支持 CPU 上的 SZ3、ZFP、无压缩对照，以及由用户注�
 
 ## Benchmark 结果
 
-[结果网页](https://binglucs.github.io/openSDC-Bench-site/) 收录六组 SDRBench 数据（包括 NYX）和 Python 接口验证。网页提供 RD 曲线、压缩比、吞吐量、`1E-3` 帕累托前沿，以及逐次测量、汇总 CSV 和误差校验结果。单线程原生 API 测试覆盖 ZFP、PFPL、SPERR、SZ3 和 Falcons。
+[结果网页](https://opensdc-org.github.io/benchmark/) 收录六组 SDRBench 数据（包括 NYX）和 Python 接口验证。网页提供 RD 曲线、压缩比、吞吐量、`1E-3` 帕累托前沿，以及逐次测量、汇总 CSV 和误差校验结果。单线程原生 API 测试覆盖 ZFP、PFPL、SPERR、SZ3 和 Falcons。
 
 网页的 View 菜单提供压缩率表，以及 PSNR、SSIM、PCC、NRMSE、频谱误差、自相关与变量间相关性变化的码率曲线。SSIM 和 Pearson 图使用原始分数，主图缩短高码率平台段，完整范围可通过 Full rate range 查看。曲线使用 `1E-1` 至 `1E-5` 的误差界，统计方法和重新生成命令见[质量曲线说明](docs/quality-rd.md)。
 
-公开结果、审计和图表位于 [`docs/data/`](docs/data/)，[独立网页仓库](https://github.com/BingluCS/openSDC-Bench-site)维护网站和自动发布流程。网站定期读取本仓库并重新校验、生成排行榜；详见[结果发布说明](docs/publication.md)。[`scripts/export_web_results.py`](scripts/export_web_results.py) 从已校验的测试目录和对应绘图目录生成网页数据。
+公开结果、审计和图表位于 [`docs/data/`](docs/data/)，[独立网页仓库](https://github.com/opensdc-org/benchmark)维护网站和自动发布流程。网站定期读取本仓库并重新校验、生成排行榜；详见[结果发布说明](docs/publication.md)。[`scripts/export_web_results.py`](scripts/export_web_results.py) 从已校验的测试目录和对应绘图目录生成网页数据。
 
 ## 项目结构与社区贡献
 
@@ -41,8 +41,8 @@ Python 接口支持 CPU 上的 SZ3、ZFP、无压缩对照，以及由用户注�
 克隆仓库并安装 Python 接口与可选的 CPU 压缩器：
 
 ```bash
-git clone --recurse-submodules https://github.com/BingluCS/openSDC-Bench.git
-cd openSDC-Bench
+git clone --recurse-submodules https://github.com/opensdc-org/OpenSDC-Bench.git
+cd OpenSDC-Bench
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e '.[cpu,plot,test]'
@@ -215,7 +215,7 @@ def quality(original, reconstructed, **options):
 
 [LFCQuality](quality/) 已作为 `quality/` 中的独立组件纳入本仓库，使用 C++ / OpenMP
 数值内核和 FFTW，提供 PSNR、SSIM、PCC、误差自相关、场自相关差异和频谱误差。
-在已安装 openSDC-Bench 的同一个 Python 环境中安装并构建：
+在已安装 OpenSDC-Bench 的同一个 Python 环境中安装并构建：
 
 ```bash
 # 从当前仓库安装质量分析组件；安装是可选的。
