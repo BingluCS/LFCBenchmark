@@ -1,10 +1,10 @@
 # Contributing to openSDC-Bench
 
-Fork [openSDC-Bench](https://github.com/BingluCS/openSDC-Bench), create a
+Fork [openSDC-Bench](https://github.com/opensdc-org/OpenSDC-Bench), create a
 branch, and open a pull request. Improvements to compressor adapters, C/C++
 quality metrics, data descriptions, validation, documentation, and tests are
 welcome. The public website has its own
-[source repository](https://github.com/BingluCS/openSDC-Bench-site).
+[source repository](https://github.com/opensdc-org/benchmark).
 
 ## Repository map
 
@@ -17,14 +17,14 @@ welcome. The public website has its own
 | `datasets/` | Data sources, field descriptions and access guide |
 | `scripts/` | Builds, execution, audit, plotting and website-data export |
 | `docs/data/` | Published measurements, quality summaries, audits and figures |
-| `docs/` | Project documentation and the existing website source |
+| `docs/` | Project documentation and published results |
 | `tests/`, `examples/` | Automated checks and extension examples |
 
 ## Local development
 
 ```bash
-git clone --recurse-submodules https://github.com/BingluCS/openSDC-Bench.git
-cd openSDC-Bench
+git clone --recurse-submodules https://github.com/opensdc-org/OpenSDC-Bench.git
+cd OpenSDC-Bench
 python -m pip install -e '.[test]'
 python -m pip install -e './quality[test]'
 lfcquality build --openmp required --fftw required

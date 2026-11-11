@@ -45,7 +45,3 @@ jobs:
           cat "$RUNNER_TEMP/quality-tests.log"
       - name: Rebuild published leaderboard
         run: python scripts/build_site_data.py --output "$RUNNER_TEMP/site-data"
-      - name: Verify website interactions
-        run: |
-          node tests/test_web_controls.js docs
-          node tests/test_leaderboard_web.js docs

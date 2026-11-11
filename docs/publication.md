@@ -1,7 +1,7 @@
 # Result validation and publication
 
 The benchmark repository is the source of the measured data and audit inputs;
-the separate [website repository](https://github.com/BingluCS/openSDC-Bench-site)
+the separate [website repository](https://github.com/opensdc-org/benchmark)
 owns the website presentation and GitHub Pages deployment.
 
 The existing public leaderboard can be rebuilt without the original server:
